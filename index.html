@@ -164,6 +164,20 @@
       document.querySelector('.sidebar-overlay').classList.toggle('active');
     }
   </script>
+  <script>
+    function toggleAbstract(btn) {
+      const abstract = btn.nextElementSibling;
+      btn.classList.toggle('open');
+      abstract.classList.toggle('open');
+      btn.querySelector('svg').style.transform = abstract.classList.contains('open') ? 'rotate(180deg)' : '';
+      const textNode = btn.childNodes[btn.childNodes.length - 1];
+      textNode.textContent = abstract.classList.contains('open') ? ' Hide Abstract' : ' Abstract';
+    }
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('open');
+      document.querySelector('.sidebar-overlay').classList.toggle('active');
+    }
+</script>
 
 </body>
 </html>
