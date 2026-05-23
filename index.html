@@ -112,11 +112,11 @@
           </div>
           <div class="paper-card__authors">Ali Kozehgaran, Liangbin Yang, Juncai Jiang</div>
           <div class="paper-card__venue">Under review at Marketing Science</div>
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-            Abstract
-          </button>
-          <div class="paper-card__abstract collapsible">
+          <details class="abstract-details">
+            <summary class="abstract-toggle">
+              Abstract
+            </summary>
+            <div class="paper-card__abstract">
             <p>Visual manipulation is increasingly prevalent in digital marketplaces, yet its impact on market outcomes 
               remains largely undocumented. We study this question using a unique longitudinal panel of 33,000 Airbnb properties 
               in California, where hosts may manipulate listing images to influence consumer evaluation. Employing a state-of-the-art forensic 
@@ -129,7 +129,8 @@
               visual manipulation can meaningfully enhance marketplace performance, but only under specific technological and contextual conditions. 
               These results offer actionable guidance for platforms governing visual content and for firms calibrating visual manipulation 
               strategies in digital environments.</p>
-          </div>
+            </div>
+          </details>
           <div class="paper-card__links">
             <span style="font-size:0.8rem; color:var(--ink-muted); font-style:italic;">Draft available upon request</span>
           </div>
