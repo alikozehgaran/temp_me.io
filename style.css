@@ -328,6 +328,36 @@ a:hover { color: var(--accent-hover); }
   line-height: 1.7;
 }
 .paper-card__abstract p + p { margin-top: 0.5rem; }
+
+/* Collapsible abstract */
+.abstract-toggle {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  font-size: 0.8rem; font-weight: 600;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--ink-muted); cursor: pointer;
+  background: none; border: 1px solid var(--border);
+  border-radius: 4px; padding: 0.35rem 0.9rem;
+  transition: all var(--transition);
+  margin-bottom: 0.8rem;
+}
+.abstract-toggle:hover {
+  border-color: var(--accent); color: var(--accent);
+  background: var(--accent-subtle);
+}
+.abstract-toggle svg {
+  width: 14px; height: 14px;
+  transition: transform 0.25s ease;
+}
+.abstract-toggle.open svg { transform: rotate(180deg); }
+.paper-card__abstract.collapsible {
+  max-height: 0; overflow: hidden; opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+  margin-top: 0;
+}
+.paper-card__abstract.collapsible.open {
+  max-height: 600px; opacity: 1;
+  margin-top: 0.5rem;
+}
 .paper-card__links {
   margin-top: 1rem;
   display: flex; gap: 1rem;
